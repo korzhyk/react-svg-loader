@@ -2,7 +2,7 @@
 
 // @flow
 
-import loader from "react-svg-loader";
+import loader from "@korzhyk/preact-svg-loader";
 import fs from "fs";
 import yargs from "yargs";
 import yaml from "js-yaml";
@@ -34,6 +34,10 @@ function getArgv() {
         describe: "Output JSX instead of applying babel-preset-react",
         boolean: true,
         default: false
+      })
+      .option("pragma", {
+        describe: "Set pragma option for transform JSX plugin",
+        default: "h"
       })
       .option("stdout", {
         describe: "Print output to stdout",
@@ -96,7 +100,8 @@ function run() {
 
     const query = {
       svgo: svgoOpts,
-      jsx: argv.jsx
+      jsx: argv.jsx,
+      pragma: argv.pragma
     };
 
     loader.apply(getLoaderContext({ argv, query, file }), [source]);

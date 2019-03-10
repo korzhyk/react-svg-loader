@@ -2,7 +2,7 @@
 
 import Svgo from "svgo";
 import { transformSync as babelTransform } from "@babel/core";
-import plugin from "babel-plugin-react-svg";
+import plugin from "@korzhyk/babel-plugin-preact-svg";
 
 import { validateAndFix } from "./svgo";
 
@@ -16,12 +16,17 @@ export function optimize(opts: any = {}): string => Promise<string> {
 
 // Babel Transform
 export function transform({
-  jsx = false
-}: { jsx: boolean } = {}): string => string {
+  jsx = false,
+  pragma = "h"
+}: { jsx: boolean, pragma: string } = {}): string => string {
   return content =>
     babelTransform(content, {
       babelrc: false,
       presets: [jsx ? void 0 : "@babel/preset-react"].filter(Boolean),
-      plugins: [require.resolve("@babel/plugin-syntax-jsx"), plugin]
+      plugins: [
+        require.resolve("@babel/plugin-syntax-jsx"),
+        [require.resolve("@babel/plugin-transform-react-jsx"), { pragma }],
+        plugin
+      ]
     });
 }

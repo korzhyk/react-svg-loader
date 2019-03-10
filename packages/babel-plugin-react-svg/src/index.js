@@ -135,7 +135,7 @@ export default function(babel: BabelCore) {
   // converts
   // <svg/>
   // to
-  // import React from 'react';
+  // import { h } from 'preact';
   // export default props => <svg {...props}/>;
   // after passing through other visitors
   const svgExpressionVisitor = {
@@ -149,11 +149,11 @@ export default function(babel: BabelCore) {
 
   const programVisitor = {
     Program(path: any) {
-      // add import react statement
+      // add import preact statement
       path.node.body.unshift(
         t.importDeclaration(
-          [t.importDefaultSpecifier(t.identifier("React"))],
-          t.stringLiteral("react")
+          [t.ImportSpecifier(t.identifier("h"), t.identifier("h"))],
+          t.stringLiteral("preact")
         )
       );
     }

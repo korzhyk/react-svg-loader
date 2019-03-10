@@ -1,7 +1,7 @@
 {
-  "name": "react-svg-loader",
+  "name": "@korzhyk/preact-svg-loader",
   "version": "3.0.0",
-  "description": "Optimize svg and load it as a React Component",
+  "description": "Optimize svg and load it as a preact component",
   "keywords": [
     "loader",
     "react",
@@ -26,7 +26,7 @@
   "main": "lib/loader.js",
   "dependencies": {
     "loader-utils": "^1.2.3",
-    "react-svg-core": "^2.1.0"
+    "@korzhyk/preact-svg-core": "^2.1.3"
   },
   "engines": {
     "node": ">=6"

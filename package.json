@@ -1,8 +1,8 @@
 {
-  "name": "react-svg-loader",
+  "name": "@korzhyk/preact-svg-loader",
   "version": "3.0.0",
   "private": true,
-  "description": "Optimize svg and load it as a React Component",
+  "description": "Optimize svg and load it as a preact component",
   "keywords": [
     "loader",
     "react",
@@ -55,6 +55,7 @@
     "gulp-util": "^3.0.8",
     "lerna": "^3.11.1",
     "nyc": "^13.2.0",
+    "preact": "^8.4.2",
     "prettier": "^1.16.4",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",

@@ -1,7 +1,7 @@
 {
-  "name": "babel-plugin-react-svg",
+  "name": "@korzhyk/babel-plugin-preact-svg",
   "version": "3.0.0",
-  "description": "Babel plugin to transform svg to react component",
+  "description": "Babel plugin to transform svg to preact component",
   "keywords": [
     "babel",
     "babel-plugin",
