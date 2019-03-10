@@ -1,6 +1,6 @@
 {
   "name": "@korzhyk/preact-svg-loader-cli",
-  "version": "3.0.0",
+  "version": "2.1.4",
   "description": "preact-svg-loader cli",
   "keywords": [
     "cli",
@@ -28,8 +28,8 @@
     "svg2react": "./lib/cli.js"
   },
   "dependencies": {
-    "lodash.isplainobject": "^4.0.6",
     "@korzhyk/preact-svg-loader": "^2.1.3",
+    "lodash.isplainobject": "^4.0.6",
     "yargs": "^13.1.0"
   },
   "engines": {
