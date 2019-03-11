@@ -1,15 +1,15 @@
 # babel-plugin-react-svg
 
-A plugin that converts svg to a react component. Used in [react-svg-loader](/packages/react-svg-loader)
+A plugin that converts svg to a (p)react component. Used in [react-svg-loader](/packages/react-svg-loader)
 
 ## Install
 
 ```sh
-npm i babel-plugin-react-svg --save-dev
+npm i @korzhyk/babel-plugin-react-svg --save-dev
 
 # or with yarn
 
-yarn add babel-plugin-react-svg --dev
+yarn add @korzhyk/babel-plugin-react-svg --dev
 ```
 
 ## Example
@@ -26,6 +26,7 @@ Output React Component:
 
 ```js
 import React from "react";
+// Or import { h } from "preact"; // if you are using set up option preact to true
 export default ({ styles = {}, ...props}) => <svg
   className={styles["foo"] || "foo"}
   style={{ textAlign: "center", width: "100px" }}

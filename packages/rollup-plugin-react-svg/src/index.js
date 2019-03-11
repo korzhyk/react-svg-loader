@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import { transform, optimize } from "react-svg-core";
+import { transform, optimize } from "@korzhyk/react-svg-core";
 import { createFilter } from "rollup-pluginutils";
 import type { BabelFileResult } from "@babel/core";
 

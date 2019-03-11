@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-react-svg",
+  "name": "@korzhyk/babel-plugin-react-svg",
   "version": "2.2.0",
   "description": "Babel plugin to transform svg to react component",
   "keywords": [
@@ -11,13 +11,13 @@
     "webpack",
     "webpack-loader"
   ],
-  "homepage": "https://github.com/boopathi/react-svg-loader/tree/master/packages/babel-plugin-react-svg",
+  "homepage": "https://github.com/korzhyk/react-svg-loader/tree/master/packages/babel-plugin-react-svg",
   "bugs": {
-    "url": "https://github.com/boopathi/react-svg-loader/issues"
+    "url": "https://github.com/korzhyk/react-svg-loader/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boopathi/react-svg-loader.git"
+    "url": "git+https://github.com/korzhyk/react-svg-loader.git"
   },
   "license": "MIT",
   "author": "boopathi",

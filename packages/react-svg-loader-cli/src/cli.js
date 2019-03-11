@@ -2,7 +2,7 @@
 
 // @flow
 
-import loader from "react-svg-loader";
+import loader from "@korzhyk/react-svg-loader";
 import fs from "fs";
 import yargs from "yargs";
 import yaml from "js-yaml";

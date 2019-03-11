@@ -3,22 +3,22 @@
 ## Install
 
 ```sh
-npm i react-svg-loader --save-dev
+npm i @korzhyk/react-svg-loader --save-dev
 ```
 
 or
 
 ```sh
-yarn add react-svg-loader --dev
+yarn add @korzhyk/react-svg-loader --dev
 ```
 
 ## Usage
 
 ```js
 // without webpack loader config
-import Image1 from 'react-svg-loader!./image1.svg';
+import Image1 from '@korzhyk/react-svg-loader!./image1.svg';
 
-// or if you're passing all .svg files via react-svg-loader,
+// or if you're passing all .svg files via @korzhyk/react-svg-loader,
 import Image2 from './image1.svg';
 
 // and use it like any other React Component
@@ -39,9 +39,11 @@ By default the loader outputs ES2015 code (with JSX compiled to JavaScript using
       loader: "babel-loader"
     },
     {
-      loader: "react-svg-loader",
+      loader: "@korzhyk/react-svg-loader",
       options: {
-        jsx: true // true outputs JSX tags
+        jsx: true, // true outputs JSX tags
+        preact: true // use preact definition to import
+        // pragma: "preact.h" // you can define your pragma option to @babel/plugin-transform-react-jsx
       }
     }
   ]
@@ -56,7 +58,7 @@ By default the loader outputs ES2015 code (with JSX compiled to JavaScript using
   use: [
     "babel-loader",
     {
-      loader: "react-svg-loader",
+      loader: "@korzhyk/react-svg-loader",
       options: {
         svgo: {
           plugins: [

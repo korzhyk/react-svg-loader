@@ -1,7 +1,7 @@
 // @flow
 
 import loaderUtils from "loader-utils";
-import { optimize, transform } from "react-svg-core";
+import { optimize, transform } from "@korzhyk/react-svg-core";
 import type { BabelFileResult } from "@babel/core";
 
 export default function(content: string) {

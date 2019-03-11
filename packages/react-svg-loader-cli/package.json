@@ -1,5 +1,5 @@
 {
-  "name": "react-svg-loader-cli",
+  "name": "@korzhyk/react-svg-loader-cli",
   "version": "2.2.0",
   "description": "react-svg-loader cli",
   "keywords": [
@@ -8,13 +8,13 @@
     "react",
     "react-svg-loader"
   ],
-  "homepage": "https://github.com/boopathi/react-svg-loader/tree/master/packages/react-svg-loader-cli",
+  "homepage": "https://github.com/korzhyk/react-svg-loader/tree/master/packages/react-svg-loader-cli",
   "bugs": {
-    "url": "https://github.com/boopathi/react-svg-loader/issues"
+    "url": "https://github.com/korzhyk/react-svg-loader/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boopathi/react-svg-loader.git"
+    "url": "git+https://github.com/korzhyk/react-svg-loader.git"
   },
   "license": "MIT",
   "author": "boopathi",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "lodash.isplainobject": "^4.0.6",
-    "react-svg-loader": "^2.1.0",
+    "@korzhyk/react-svg-loader": "^2.1.0",
     "yargs": "^13.1.0"
   },
   "engines": {
