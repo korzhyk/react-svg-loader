@@ -9,8 +9,8 @@ import yaml from "js-yaml";
 import path from "path";
 import isPlainObject from "lodash.isplainobject";
 
-function makeFilename(filename: string) {
-  return filename + ".react.js";
+function makeFilename(filename: string, preact: boolean) {
+  return filename + "." + (preact ? "p" : "") + "react.js";
 }
 
 function handlePath(configFile: string) {
@@ -89,7 +89,7 @@ function getLoaderContext({ argv, query, file }) {
         /* eslint-disable no-console */
         if (err) console.error("REACT-SVG-LOADER ERROR", file, err.stack);
         else if (argv["stdout"]) console.log(result);
-        else fs.writeFileSync(makeFilename(file), result);
+        else fs.writeFileSync(makeFilename(file, argv.preact), result);
         /* eslint-enable */
       };
     }
