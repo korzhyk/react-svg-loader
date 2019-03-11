@@ -148,14 +148,20 @@ export default function(babel: BabelCore) {
   };
 
   const programVisitor = {
-    Program(path: any) {
-      // add import react statement
-      path.node.body.unshift(
-        t.importDeclaration(
-          [t.importDefaultSpecifier(t.identifier("React"))],
-          t.stringLiteral("react")
-        )
-      );
+    Program(path: any, state: any) {
+      let specifier;
+      let source;
+
+      if (state.opts.preact) {
+        // define import for preact statement
+        specifier = t.importSpecifier(t.identifier("h"), t.identifier("h"));
+        source = t.stringLiteral("preact");
+      } else {
+        // define import for react statement
+        specifier = t.importDefaultSpecifier(t.identifier("React"));
+        source = t.stringLiteral("react");
+      }
+      path.node.body.unshift(t.importDeclaration([specifier], source));
     }
   };
 

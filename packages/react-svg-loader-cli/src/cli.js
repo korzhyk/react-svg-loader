@@ -35,6 +35,15 @@ function getArgv() {
         boolean: true,
         default: false
       })
+      .option("preact", {
+        describe: "Create preact compatible component",
+        boolean: true,
+        default: false
+      })
+      .option("pragma", {
+        describe: "Set pragma option for transform JSX plugin",
+        default: "h"
+      })
       .option("stdout", {
         describe: "Print output to stdout",
         boolean: true,
@@ -96,7 +105,9 @@ function run() {
 
     const query = {
       svgo: svgoOpts,
-      jsx: argv.jsx
+      jsx: argv.jsx,
+      preact: argv.preact,
+      pragma: argv.pragma
     };
 
     loader.apply(getLoaderContext({ argv, query, file }), [source]);

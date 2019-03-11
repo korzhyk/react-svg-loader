@@ -11,7 +11,13 @@ export default function(content: string) {
 
   Promise.resolve(String(content))
     .then(optimize(loaderOpts.svgo))
-    .then(transform({ jsx: loaderOpts.jsx }))
+    .then(
+      transform({
+        jsx: loaderOpts.jsx,
+        preact: loaderOpts.preact,
+        pragma: loaderOpts.pragma
+      })
+    )
     .then((result: BabelFileResult) => cb(null, result.code))
     .catch(err => cb(err));
 }

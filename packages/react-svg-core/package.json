@@ -23,6 +23,7 @@
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-react-svg": "^2.1.0",
     "lodash.isplainobject": "^4.0.6",

@@ -16,12 +16,20 @@ export function optimize(opts: any = {}): string => Promise<string> {
 
 // Babel Transform
 export function transform({
-  jsx = false
-}: { jsx: boolean } = {}): string => string {
+  jsx = false,
+  preact = false,
+  pragma = "h"
+}: { jsx: boolean, preact: boolean, pragma: string } = {}): string => string {
   return content =>
     babelTransform(content, {
       babelrc: false,
       presets: [jsx ? void 0 : "@babel/preset-react"].filter(Boolean),
-      plugins: [require.resolve("@babel/plugin-syntax-jsx"), plugin]
+      plugins: [
+        require.resolve("@babel/plugin-syntax-jsx"),
+        preact
+          ? [require.resolve("@babel/plugin-transform-react-jsx"), { pragma }]
+          : void 0,
+        [plugin, { preact }]
+      ].filter(Boolean)
     });
 }
