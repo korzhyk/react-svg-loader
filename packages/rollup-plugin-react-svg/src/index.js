@@ -10,7 +10,9 @@ type PluginOpts = {
   include?: any,
   exclude?: any,
   svgo?: any,
-  jsx?: boolean
+  jsx?: boolean,
+  preact?: boolean,
+  pragma?: string
 };
 
 export default function reactSvgLoadPlugin(options: PluginOpts = {}): any {
@@ -25,7 +27,13 @@ export default function reactSvgLoadPlugin(options: PluginOpts = {}): any {
 
       return Promise.resolve(String(contents))
         .then(optimize(options.svgo))
-        .then(transform({ jsx: options.jsx }))
+        .then(
+          transform({
+            jsx: options.jsx,
+            preact: options.preact,
+            pragma: options.pragma
+          })
+        )
         .then((result: BabelFileResult) => result.code);
     }
   };
