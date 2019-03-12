@@ -1,14 +1,14 @@
-# react-svg-loader
+# @korzhyk/react-svg-loader
 
 [![Backers on Open Collective](https://opencollective.com/react-svg-loader/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/react-svg-loader/sponsors/badge.svg)](#sponsors) [![Greenkeeper badge](https://badges.greenkeeper.io/boopathi/react-svg-loader.svg)](https://greenkeeper.io/) [![Build Status](https://travis-ci.org/boopathi/react-svg-loader.svg?branch=master)](https://travis-ci.org/boopathi/react-svg-loader) [![npm version](https://badge.fury.io/js/react-svg-loader.svg)](https://badge.fury.io/js/react-svg-loader) [![Code Climate](https://codeclimate.com/github/boopathi/react-svg-loader/badges/gpa.svg)](https://codeclimate.com/github/boopathi/react-svg-loader) [![Test Coverage](https://codeclimate.com/github/boopathi/react-svg-loader/badges/coverage.svg)](https://codeclimate.com/github/boopathi/react-svg-loader/coverage)
 
 ## Packages
 
-* [babel-plugin-react-svg](/packages/babel-plugin-react-svg)
-* [react-svg-core](/packages/react-svg-core)
-* [react-svg-loader](/packages/react-svg-loader)
-* [react-svg-loader-cli](/packages/react-svg-loader-cli)
-* [rollup-plugin-react-svg](/packages/rollup-plugin-react-svg)
+* [@korzhyk/babel-plugin-react-svg](/packages/babel-plugin-react-svg)
+* [@korzhyk/react-svg-core](/packages/react-svg-core)
+* [@korzhyk/react-svg-loader](/packages/react-svg-loader)
+* [@korzhyk/react-svg-loader-cli](/packages/react-svg-loader-cli)
+* [@korzhyk/rollup-plugin-react-svg](/packages/rollup-plugin-react-svg)
 
 ## Versions
 
